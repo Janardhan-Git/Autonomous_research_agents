@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Autonomous Research Agent</title>
+</head>
+<body>
+  <h1>AI Research & Blog Writer</h1>
+  <form method="POST">
+    <label>Enter Topic:</label><br>
+    <input type="text" name="topic" required style="width: 300px;">
+    <button type="submit">Generate</button>
+  </form>
+  {% if output %}
+    <hr>
+    <h2>Generated Blog</h2>
+    <pre>{{ output }}</pre>
+  {% endif %}
+
+{% if error %}
+  <p style="color:red;">{{ error }}</p>
+{% endif %}
+
+
+</body>
+</html>
