@@ -3,7 +3,7 @@ services:
     name: Autonomous_research_agent
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:Flask(__name__)
+    startCommand: gunicorn app:app
     envVars:
       - key: GROQ_API_KEY
         sync: false
